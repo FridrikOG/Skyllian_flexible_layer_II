@@ -1,0 +1,138 @@
+Skip to content Search or jump to… Pull requests Issues Marketplace Explore
+@Thorarinng XRPLF / xrpl-dev-portal Public Code Issues 114 Pull requests 4
+Actions Projects Security Insights
+xrpl-dev-portal/content/_code-samples/nftoken-tester/js/nftoken-tester.html
+@mDuo13 mDuo13 more NFT tutorial fixes Latest commit 2da5a6b on 10 Jan History 2
+contributors @mDuo13@DennisDawson 419 lines (371 sloc) 12.9 KB
+
+<!-- https://github.com/XRPLF/xrpl-dev-portal/blob/master/content/_code-samples/nftoken-tester/js/nftoken-tester.html -->
+
+<html>
+  <head>
+    <script src="https://unpkg.com/xrpl@2.1.0-beta.1"></script>
+    <script>
+      if (typeof module !== "undefined") var xrpl = require("xrpl");
+
+      //***************************
+      //** Mint Token *************
+      //***************************
+
+      async function mintToken() {
+        console.log("frikki");
+        console.log(secret.value);
+        console.log(account.value);
+
+        const wallet = xrpl.Wallet.fromSeed(secret.value);
+        const client = new xrpl.Client(
+          "wss://xls20-sandbox.rippletest.net:51233"
+        );
+        await client.connect();
+        console.log("Connected to Sandbox");
+
+        // Note that you must convert the token URL to a hexadecimal
+        // value for this transaction.
+        // ----------------------------------------------------------
+        const transactionBlob = {
+          TransactionType: "NFTokenMint",
+          Account: wallet.classicAddress,
+          URI: xrpl.convertStringToHex(tokenUrl.value),
+          Flags: parseInt(flags.value),
+          TokenTaxon: 0, //Required, but if you have no use for it, set to zero.
+        };
+        // Submit signed blob --------------------------------------------------------
+        const tx = await client.submitAndWait(transactionBlob, { wallet });
+
+        const nfts = await client.request({
+          method: "account_nfts",
+          account: wallet.classicAddress,
+        });
+        console.log(nfts);
+
+        // Check transaction results -------------------------------------------------
+        console.log("Transaction result:", tx.result.meta.TransactionResult);
+        console.log(
+          "Balance changes:",
+          JSON.stringify(xrpl.getBalanceChanges(tx.result.meta), null, 2)
+        );
+        client.disconnect();
+      } //End of mintToken
+    </script>
+
+    <title>NFToken Tester</title>
+  </head>
+  <body>
+    <h1>NFToken Tester</h1>
+    <form id="theForm">
+      <p>
+        <button type="button" onClick="mintToken()">Mint Token</button
+        >&nbsp;&nbsp;
+        <button type="button" onClick="getTokens()">Get Tokens</button
+        >&nbsp;&nbsp;
+        <button type="button" onClick="burnToken()">Burn Token</button
+        >&nbsp;&nbsp;
+      </p>
+      <p>
+        <button type="button" onClick="createSellOffer()">
+          Create Sell Offer</button
+        >&nbsp;&nbsp;
+        <button type="button" onClick="createBuyOffer()">
+          Create Buy Offer</button
+        >&nbsp;&nbsp;
+        <button type="button" onClick="getOffers()">Get Offers</button>
+      </p>
+      <p>
+        <button type="button" onClick="acceptSellOffer()">
+          Accept Sell Offer</button
+        >&nbsp;&nbsp;
+        <button type="button" onClick="acceptBuyOffer()">
+          Accept Buy Offer</button
+        >&nbsp;&nbsp;
+        <button type="button" onClick="cancelOffer()">Cancel Offer</button
+        >&nbsp;&nbsp;
+      </p>
+      <table>
+        <tr>
+          <td align="right">Account</td>
+          <td><input type="text" id="account" value="" size="40" /></td>
+        </tr>
+        <tr>
+          <td align="right">Secret</td>
+          <td><input type="text" id="secret" value="" size="40" /></td>
+        </tr>
+        <tr>
+          <td align="right">Token URL</td>
+          <td>
+            <input
+              type="text"
+              id="tokenUrl"
+              value="ipfs://bafybeigdyrzt5sfp7udm7hu76uh7y26nf4dfuylqabf3oclgtqy55fbzdi"
+              size="80"
+            />
+          </td>
+        </tr>
+        <tr>
+          <td align="right">Flags</td>
+          <td><input type="text" id="flags" value="1" size="10" /></td>
+        </tr>
+        <tr>
+          <td align="right">Token ID</td>
+          <td><input type="text" id="tokenId" value="" size="80" /></td>
+        </tr>
+        <tr>
+          <td align="right">Amount</td>
+          <td><input type="text" id="amount" value="1000000" size="20" /></td>
+        </tr>
+        <tr>
+          <td align="right">Token Offer Index</td>
+          <td><input type="text" id="tokenOfferIndex" value="" size="80" /></td>
+        </tr>
+        <tr>
+          <td align="right">Owner</td>
+          <td><input type="text" id="owner" value="" size="80" /></td>
+        </tr>
+      </table>
+    </form>
+  </body>
+</html>
+© 2022 GitHub, Inc. Terms Privacy Security Status Docs Contact GitHub Pricing
+API Training Blog About

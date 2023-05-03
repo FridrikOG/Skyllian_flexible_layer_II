@@ -1,0 +1,3 @@
+{
+    "RABBIT_MQ": "amqps://hr-fintech-rabbitmq:wall_walker_212@b-1d97e372-ff08-4b61-85e1-5ad197032218.mq.us-west-2.amazonaws.com:5671"
+}

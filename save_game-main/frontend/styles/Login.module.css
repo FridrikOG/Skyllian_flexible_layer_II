@@ -1,0 +1,62 @@
+.container {
+  display: flex;
+  position: relative;
+}
+
+.img {
+  margin-top: 15em;
+  width: 623.9px;
+  height: 498.24px;
+}
+
+.form {
+  padding: 50px;
+}
+
+.createAccount {
+  display: flex;
+  flex-direction: row;
+
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 2.5em;
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  margin-left: 2em;
+}
+
+#forgotPwd {
+  display: flex;
+  justify-content: flex-end;
+
+  margin-top: 1em;
+}
+
+#title {
+  display: flex;
+  justify-content: flex-end;
+
+  width: 100%;
+}
+
+.inputNames {
+  display: flex;
+  flex-direction: row;
+
+  width: var(--inputWidth);
+
+  margin-right: 1em;
+}
+
+.names {
+  display: flex;
+}
+
+#names {
+  margin-right: 4.5em;
+}

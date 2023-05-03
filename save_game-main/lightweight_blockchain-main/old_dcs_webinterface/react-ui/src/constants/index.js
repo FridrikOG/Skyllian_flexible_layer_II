@@ -1,0 +1,12 @@
+export const SET_VERIFY = 'SET_VERIFY';
+export const SET_LOGIN_MODAL = 'SET_LOGIN_MODAL';
+export const SET_VERIFY_MODAL = 'SET_VERIFY_MODAL';
+export const SET_USER = 'SET_USER';
+export const GET_AUTH_LEVEL = 'GET_AUTH_LEVEL';
+export const DELETE_AUTH_LEVEL = 'DELETE_AUTH_LEVEL';
+export const SET_ALL_PAYLOADS = 'SET_ALL_PAYLOADS';
+export const GET_ALL_USERS = 'GET_ALL_USERS';
+export const ADD_PAYLOAD = 'ADD_PAYLOAD';
+export const ADD_USER = 'ADD_USER';
+export const LOGOUT_USER = 'LOGOUT_USER';
+export const DELETE_USER = 'DELETE_USER';

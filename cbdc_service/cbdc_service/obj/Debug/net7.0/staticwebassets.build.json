@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "uqYEx5AIszZdfjbELTyAsvi/4LE0oOPJwoLselO9xoA=",
+  "Source": "cbdc_service",
+  "BasePath": "_content/cbdc_service",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

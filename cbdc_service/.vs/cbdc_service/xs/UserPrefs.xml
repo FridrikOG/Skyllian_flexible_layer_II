@@ -1,0 +1,36 @@
+﻿<Properties StartupConfiguration="{3887F11E-2EC1-4A14-9E85-A774DE37EA91}|https">
+  <MonoDevelop.Ide.Workbench ActiveDocument="cbdc_service/Repository/InMemItemsRepository.cs">
+    <Files>
+      <File FileName="cbdc_service/Controllers/WeatherForecastController.cs" Line="30" Column="20" />
+      <File FileName="cbdc_service/Program.cs" Line="20" Column="1" />
+      <File FileName="cbdc_service/WeatherForecast.cs" Line="14" Column="1" />
+      <File FileName="cbdc_service/appsettings.Development.json" Line="1" Column="1" />
+      <File FileName="cbdc_service/Properties/launchSettings.json" Line="28" Column="8" />
+      <File FileName="cbdc_service/Entities/item.cs" Line="4" Column="20" />
+      <File FileName="cbdc_service/Repository/InMemItemsRepository.cs" Line="10" Column="3" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="cbdc_service" expanded="True" selected="True">
+            <Node name="cbdc_service" expanded="True">
+              <Node name="Dependencies" expanded="True" />
+              <Node name="Controllers" expanded="True" />
+              <Node name="Entities" expanded="True" />
+              <Node name="Properties" expanded="True" />
+              <Node name="Repository" expanded="True" />
+              <Node name="appsettings.json" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.ItemProperties.cbdc__service PreferredExecutionTarget="/Applications/Brave Browser.app" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+</Properties>

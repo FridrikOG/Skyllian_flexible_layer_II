@@ -1,0 +1,614 @@
+@import url('https://fonts.googleapis.com/css?family=Varela');
+@import url('https://fonts.googleapis.com/css?family=Lobster');
+
+:root {
+    --yellow-main: #F2C94C;
+    --green-main: #27AE60;
+    --green-dark: #219653;
+    --title-size: 72px;
+    --sub-title-size: 48px;
+    --text-size: 24px;
+    --mid-text-size: 20px;
+    --small-text-size: 16px;
+    --gray-main: #F2F2F2;
+    --gray-text: #BDBDBD;
+    --gray-dark-background: #E0E0E0;
+    --gray-dark-outline: #828282;
+  }
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--gray-main);
+  font-family: "Varela", cursive;
+  font-size: var(--text-size);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+h1 {
+  font-family: 'Lobster', cursive;
+  color: var(--yellow-main);
+  font-size: var(--title-size);
+}
+
+h2 {
+  font-family: 'Lobster', cursive;
+  color: var(--yellow-main);
+  font-size: var(--sub-title-size);
+}
+
+h3 {
+  font-family: 'Lobster', cursive;
+  color: var(--yellow-main);
+  font-size: var(--text-size);
+}
+h6{
+    width: 30px;
+    background-color: var(--yellow-main);
+    margin-top: -10px;
+    color: var(--green-main);
+}
+
+
+/* --------------------------------Views------------------------------------------- */
+
+.top_view {
+  background-color: var(--green-main);
+  height: calc(100vh - 98px);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: white;
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+.welcome_info {
+  text-align: left;
+  flex: 1;
+  margin-right: 100px;
+}
+
+.welcome_image {
+  flex: 1;
+  align-self: strectch;
+}
+
+.mid_view {
+  background-image: url('./assests/Chain.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: -10% 30%;
+  color: var(--green-main);
+  /* background-size: 150px; */
+  height: calc(100vh - 98px);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+.bottom_left_info{
+  /* flex-direction: column; */
+  align-self: flex-end;
+  margin-bottom: 100px;
+  margin-right: 100px;
+}
+
+.top_right_info{
+  align-self: flex-start;
+  margin-top: 100px;
+  margin-left: 100px;
+}
+
+.bottom_view {
+  color: var(--green-main);
+  height: calc(100vh - 98px);
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+.bottom_sub{
+  display: flex;
+  flex-direction: row;
+}
+
+.founder{
+  flex: 1.5;
+  margin-right: 100px;
+}
+
+.team{
+  flex: 1;
+}
+
+.image_container{
+  flex: 1;
+  padding-right: 50px;
+  padding-bottom: 50px;
+}
+
+.founder_text{
+  flex: 1;
+  font-size: var(--mid-text-size);
+}
+
+.team_text{
+  flex: 1;
+  font-size: var(--small-text-size);
+}
+
+.bottom_view img{
+  width: 100%;
+  height: auto;
+  align-self: center;
+}
+
+.team img{
+  max-width: 150px;
+  padding-right: 20px;
+  padding-bottom: 10px;
+}
+
+.expand_title{
+  padding-top: 10px;
+  font-family: 'Varela', cursive;
+  font-size: var(--text-size);
+  align-self: center;
+}
+
+.my_container{
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+/* --------------------------------Upload------------------------------------------- */
+
+.Upload {
+  display: flex;
+  flex-direction: row;
+  flex: 2.5;
+  align-items: flex-start;
+  text-align: left;
+  overflow: hidden;
+  width: 100%;
+  margin-right: 50px;
+}
+
+.Content {
+  display: flex;
+  flex-direction: row;
+  padding-top: 16px;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.Files {
+  margin-left: 32px;
+  align-items: flex-start;
+  justify-items: flex-start;
+  flex: 1;
+  overflow-y: auto;
+}
+
+.Actions {
+  position: relative;
+  display: flex;
+  flex: 1;
+  align-self: center;
+  height: 100%;
+  align-items: flex-end;
+  flex-direction: column;
+}
+
+.Title {
+  margin-bottom: 32px;
+  color: #555;
+}
+
+.Filename {
+  margin-bottom: 8px;
+  font-size: 16px;
+  color: #555;
+}
+
+.Row {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: space-between;
+  /* height: 50px; */
+  padding: 8px;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.CheckIcon {
+  opacity: 0.5;
+  margin-left: 32px;
+}
+
+.ProgressWrapper {
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  align-items: center;
+}
+
+.MyForm{
+  flex: 1;
+}
+
+.MyForm .true_icon{
+  color: var(--green-main);
+  font-size: 100px;
+}
+
+.MyForm .false_icon{
+  color: red;
+  font-size: 100px;
+}
+
+.MyForm .loading_icon{
+  width: 100px;
+  height: 100px;
+}
+
+.UploadFormContainer{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.SsnContainer{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.SsnContainer .form-group{
+  width: 40%;
+  margin-bottom: 0px;
+}
+
+.SsnContainer .btn{
+  width: 40%;
+}
+
+.ProgressBar {
+  width: 100%;
+  height: 8px;
+  background-color: rgb(183, 155, 229);
+  border-radius: 5px;
+}
+
+.Progress {
+  background-color: rgba(103, 58, 183, 1);
+  height: 100%;
+  margin: 0;
+  border-radius: 5px;
+}
+/* --------------------------------Verify------------------------------------------- */
+.verify_modal .VerifyFormContainer{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.verify_modal .modal-content {
+  background-color: var(--yellow-main);
+  border-radius: 40px;
+  align-self: center;
+  padding: 40px 50px;
+}
+.verify_modal .Upload {
+  padding: 10px 0px;
+}
+.verify_modal .verify_container{
+  height: calc(100vh - 98px);
+}
+
+.verify_modal .modal-header{
+  font-family: 'Lobster', cursive;
+  color: var(--green-main);
+  align-self: center;
+  border-bottom: 0px;
+}
+
+.verify_modal .h4, h4{
+  font-size: var(--sub-title-size);
+}
+
+.verify_modal .verify_info{
+  color: var(--green-main);
+}
+
+/* --------------------------------Input------------------------------------------- */
+.form-control {
+  border: 1px solid var(--green-main);
+}
+
+.form-control::placeholder {
+  /* color: red; */
+  color: var(--gray-placeholder);
+}
+
+.error {
+  text-align: center;
+  font-size: 14px;
+  color: red;
+}
+/* --------------------------------Home------------------------------------------- */
+.App {
+  text-align: center;
+  background-color: rgb(206, 213, 223);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+}
+
+.Card {
+  background-color: white;
+  padding: 32px;
+  width: 50%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.11),
+      0 5px 15px 0 rgba(0, 0, 0, 0.08);
+  box-sizing: border-box;
+}
+/* --------------------------------Dropzone------------------------------------------- */
+.Dropzone {
+  background-color: var(--gray-dark-background);
+  border: 1px solid var(--green-main);
+  border-radius: 20px 20px 20px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  font-size: 16px;
+  width: 100%;
+  height: 208px;
+}
+
+.Highlight {
+  background-color: rgb(188, 185, 236);
+}
+
+.Icon {
+  margin: 20px;
+  height: calc(100% - 20px);
+  width: auto;
+}
+
+.FileInput {
+  display: none;
+}
+
+/* --------------------------------Login------------------------------------------- */
+.login_modal .modal-content {
+  background-color: var(--yellow-main);
+  border-radius: 40px;
+  align-self: center;
+  max-width: 400px;
+  padding: 40px 50px;
+}
+.login_modal .modal-dialog-centered {
+  justify-content: center;
+}
+.login_modal .modal-header {
+  font-family: 'Lobster', cursive;
+  color: var(--green-main);
+  font-size: var(--text-size);
+  align-self: center;
+  border-bottom: 0px;
+}
+.login_modal .modal-footer {
+  border-top: 0px;
+  justify-content: center;
+}
+.modal-header .close {
+  display:none;
+}
+.login_modal .h4, h4 {
+  font-size: 32px;
+}
+.login_modal .btn-success {
+  background-color: var(--green-main);
+  width: 100%;
+}
+.login_modal .btn-link {
+  font-size: var(--small-text-size);
+  color: var(--green-dark);
+  width: 100%;
+}
+.login_modal .or_border{
+  border-top: 1px solid var(--green-main);
+  width: 50%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+/* --------------------------------PayloadList------------------------------------------- */
+.payload_list_container thead{
+  background-color: var(--green-main);
+  width: 100%;
+}
+.payload_list_container table{
+  border: 3px solid var(--green-main);
+  border-radius: 0px 10px 0px 0px;
+}
+.payload_list_container .true_icon{
+  color: var(--green-main);
+}
+.payload_list_container .false_icon{
+  color: red;
+}
+.payload_list_container .filter-label {
+  display: flex;
+  flex-direction: column;
+}
+.payload_list_container{
+  font-size: var(--small-text-size);
+}
+/* --------------------------------Navbar------------------------------------------- */
+.logo {
+  height: 60px;
+}
+
+.navbar_title {
+  display: flex;
+  font-size: var(--text-size);
+  justify-content: center;
+}
+
+.navbar_title div {
+  font-family: 'Lobster', cursive;
+  color: var(--yellow-main);
+  font-size: var(--sub-title-size);
+  padding-left: 20px;
+  align-self: center;
+}
+
+.navbar_container .lesser_links {
+  color: var(--yellow-main)!important;
+}
+
+.navbar_container .primary_links {
+  color: var(--gray-main)!important;
+}
+
+.navbar_container {
+  background-color: var(--green-main);
+  position: sticky;
+  top: 0;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+/* --------------------------------UserList------------------------------------------- */
+.user_list_containertbody thead{
+  background-color: var(--green-main);
+  width: 100%;
+}
+.user_list_containertbody table{
+  border: 3px solid var(--green-main);
+  border-radius: 0px 10px 0px 0px;
+}
+.user_list_containertbody tr {
+  cursor: pointer;
+}
+.filter-label {
+  display: flex;
+  flex-direction: column;
+}
+.btn-delete {
+  /* background: red; */
+  color: #fff;
+}
+/* --------------------------------SignUp------------------------------------------- */
+.admin_container .MuiAccordionDetails-root{
+  justify-content: center;
+}
+
+.signUpContainer{
+  display: flex;
+  flex-direction: row;
+  align-self: center;
+  width: 50%;
+}
+
+.signUpContainer > *{
+  flex: 1;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.signUpFormRightLower{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  height: 40px;
+
+}
+
+.signUpFormRightLower > *{
+  flex: 1;
+  justify-content: center;
+}
+.signUpFormRight .MuiFormControlLabel-labelPlacementStart {
+  height: 40px;
+}
+
+.signUpContainer .btn{
+  background-color: var(--green-main);
+}
+.signUpContainer .MuiTypography-root{
+  font-family: "Varela", cursive;
+  font-size: 16px;
+}
+
+/* --------------------------------Material UI------------------------------------------- */
+.MuiAccordionSummary-content.Mui-expanded{
+  margin: 0px;
+}
+.MuiCollapse-container{
+  margin-top: 20px;
+}
+
+.MuiPaper-root{
+  background-color: var(--gray-background);
+  color: var(--green-main);
+  border-bottom-left-radius: 0px;
+}
+.MuiPaper-elevation1{
+  box-shadow: 0px 0px 0px 0px rgba(0,0,0,0);
+}
+.MuiAccordion-rounded:last-child{
+  
+  border-radius: 0px;
+}
+.MuiTypography-root{
+  font-family: 'Lobster', cursive;
+  font-size: var(--sub-title-size);
+}
+.MuiIconButton-root {
+  color: var(--green-main);
+}
+
+.MuiAccordionSummary-content{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0px 0px 12px 0px;
+  border-bottom: 1px solid var(--green-main);
+}
+.MuiCollapse-container{
+  margin-top: 20px;
+}
+
+.MuiSvgIcon-root{
+  font-size: 40px;
+}
+
+.MuiOutlinedInput-notchedOutline{
+  border-color: var(--green-main)!important;
+}
+
+.MuiFormControl-root{
+  width: 100%;
+  background: white;
+  border-color: var(--green-main);
+}
