@@ -108,3 +108,45 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 
 
 ## Insurance
+
+
+Life Insurance platform
+
+The proposed application revolutionizes the life insurance industry by integrating NFTs and blockchain technology. It streamlines policy applications, automates underwriting, and increases transparency. The platform offers a quick sign-up process, followed by an easy application where users answer a few questions. The system calculates an insurance offer, and the user can accept the offer by providing payment information. The insurance transaction is saved on the blockchain, and the policy information is stored as an NFT certificate. The application addresses key challenges in the insurance industry, such as information asymmetry, high transaction costs, and limited innovation, ultimately benefiting policyholders and investors.
+
+
+
+### Running backend
+First we have to navigate to save_game-main
+
+then we activate venv and install requirements:
+
+```bash
+   
+### Running backend
+First we have to navigate to save_game-main
+
+then we activate venv and install requirements:
+
+```bash
+    1. virtualenv venv
+    2. source ./venv/bin/activate
+    3. pip install -r requirements.txt
+```
+To run: 
+
+```bash
+    1. python backend/manage.py
+    2. OR  ./dev.sh
+```
+
+
+
+
+### Running frontend
+
+```bash
+    1. npm install (have node.js installed locally/globally on your machine)
+    2. npm run dev (runs frontend application)
+
+```
